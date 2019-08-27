@@ -33,8 +33,6 @@ exports.randomIn=function(r,n){var o=n-r;return r+o*Math.random()},exports.rando
 		margin-top: 450px;
 		background-color: black;
 		border-radius: 25px;
-		font-size: 220px;
-		line-height: 275px;
 		text-align: center;
 		color: yellow;
 		font-family: fontus;
@@ -42,6 +40,12 @@ exports.randomIn=function(r,n){var o=n-r;return r+o*Math.random()},exports.rando
 	}
 	#demo{
 		font-family: fontus;
+		font-size: 220px;
+		line-height: 275px;
+	}
+	#demo-after{
+		font-size: 100px;
+		line-height: 275px;
 	}
 	#Yay{
 		width: 100%;
@@ -68,7 +72,7 @@ ctx.fillStyle = "#ffee33";
 ctx.fillRect(0, 0, document.getElementById('Yay').width, document.getElementById('Yay').height);
 
 
-var countDownDate = new Date("August 28, 2019 00:00:01").getTime();
+var countDownDate = new Date("August 27, 2019 23:15:10").getTime();
 
 function gogo(){
   // Get today's date and time
@@ -91,6 +95,8 @@ function gogo(){
     clearInterval(x);
     document.getElementById("demo").innerHTML = "LA MULTI AAANNNAAAAA!!!!";
 	yaygo()
+	let demo = document.getElementById("demo")
+	demo.setAttribute('id', "demo-after")
   }
 }
 
